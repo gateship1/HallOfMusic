@@ -1,0 +1,6 @@
+function(ERROR_FOR_UNPARSED PREFIX)
+    set(ARGS "${${PREFIX}_UNPARSED_ARGUMENTS}")
+    if (NOT ( "${ARGS}" STREQUAL ""))
+        message(FATAL_ERROR "unparsed argument: ${ARGS}")
+    endif()
+endfunction()
